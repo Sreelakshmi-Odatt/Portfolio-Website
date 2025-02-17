@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sreelakshmi Odatt Venu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+      <div class="container-fluid">
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+      
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <div class="form-check form-switch mt-2">
+              <input class="form-check-input" type="checkbox" id="darkModeToggle">
+              <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section id="home" class="text-center">
+      <style>
+        /* Smooth Scrolling */
+        html {
+          scroll-behavior: smooth;
+        }
+
+        /* Light Theme (default) */
+        body {
+          background-color: #f8f9fa;
+          color: #212529;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar {
+          background-color: #f8f9fa;
+          color: #212529;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+          color: #212529;
+        }
+
+        /* .navbar .navbar-toggler {
+      border-color: #212529;
+    } */
+        body.dark-mode .navbar-nav .nav-item .nav-link:hover {
+          background-color: #2863a7; /* Change to green or any color you prefer */
+          color: white;
+        }
+        /* Centering the content */
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+
+        .static-txt {
+          font-size: 50px;
+          font-weight: 600;
+          color: #212529;
+          margin-bottom: 10px;
+        }
+
+        .dynamic-txt {
+          display: inline-block;
+          font-size: 40px;
+          font-weight: 400;
+          color: #212529;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        /* Typing Effect */
+        @keyframes typing {
+          0% {
+            width: 0;
+            border-right: 3px solid #212529;
+          }
+          50% {
+            width: 100%;
+            border-right: 3px solid #212529;
+          }
+          100% {
+            width: 100%;
+            border-right: none;
+          }
+        }
+
+        /* Cursor Blinking */
+        @keyframes blink {
+          50% {
+            border-color: transparent;
+          }
+        }
+
+        /* Dark Theme */
+        body.dark-mode {
+          background-color: #2a3d66;
+          color: #f8f9fa;
+        }
+
+        .navbar.dark-mode {
+          background-color: #2a3d66;
+          color: #f8f9fa;
+        }
+
+        .navbar.dark-mode .navbar-brand,
+        .navbar.dark-mode .nav-link {
+          color: #f8f9fa;
+        }
+
+        .navbar.dark-mode .navbar-toggler {
+          border-color: #f8f9fa;
+        }
+
+        /* Dark Mode Text Effects */
+        body.dark-mode .static-txt,
+        body.dark-mode .dynamic-txt {
+          color: #f8f9fa;
+        }
+
+        /* Skills Section Styling */
+        .skill-card {
+          height: 100%;
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+        }
+
+        .skill-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-card h5 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        .skill-card ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .skill-card ul li {
+          font-size: 1rem;
+          margin: 5px 0;
+          color: #212529;
+        }
+      </style>
+
+      <div class="wrapper">
+        <div class="static-txt">I'm Sreelakshmi Odatt Venu</div>
+        <div class="dynamic-txt"></div>
+      </div>
+    </section>
+
+    <script>
+      const roles = [" A Software Developer", " A Student", " A Violinist"];
+      let roleIndex = 0;
+      const dynamicText = document.querySelector(".dynamic-txt");
+
+      function typeEffect() {
+        let text = roles[roleIndex];
+        let i = 0;
+        dynamicText.innerHTML = "";
+        dynamicText.style.borderRight = "3px solid #212529";
+
+        function type() {
+          if (i < text.length) {
+            dynamicText.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, 100);
+          } else {
+            dynamicText.style.borderRight = "none";
+            setTimeout(erase, 1500);
+          }
+        }
+
+        function erase() {
+          if (i > 0) {
+            dynamicText.innerHTML = text.substring(0, i - 1);
+            i--;
+            setTimeout(erase, 50);
+          } else {
+            dynamicText.style.borderRight = "3px solid #212529";
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(typeEffect, 500);
+          }
+        }
+
+        type();
+      }
+
+      typeEffect();
+    </script>
+
+    <section id="experience" class="container mt-5">
+      <h2 class="text-center">Experience</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card hover-card rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">WordPress Developer Intern</h5>
+              <h6 class="card-text">
+                My Worthy Home, New York, New York (Jan 2025 – Present)
+              </h6>
+              <p class="card-text">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Optimized WordPress backend with PHP and Elementor Pro, reducing
+                loading time by 30% and improving performance.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Customized themes and plugins to enhance scalability,
+                functionality, and site responsiveness.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Collaborated in an Agile environment, actively participating in
+                sprint planning and retrospectives.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card hover-card rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Front End Developer Intern</h5>
+              <h6 class="card-text">
+                Nauticomm Ltd, Bangkok, Thailand (May 2024 – Sept 2024)
+              </h6>
+              <p class="card-text">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Developed a page within an existing web application, integrating
+                4 water monitoring systems into a Google Maps page using
+                Angular, TypeScript, and Angular Material.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Integrated Google Maps API and built responsive UIs with
+                TypeScript, HTML, SCSS, Tailwind CSS, and JavaScript for a
+                seamless user experience.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Collaborated in an Agile/DevOps environment, participating in
+                code reviews, debugging, and troubleshooting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="container mt-5">
+      <h2 class="text-center">Education</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card hover-card rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">
+                Bachelor of Science Degree in Computer Science
+              </h5>
+              <h6 class="card-text">
+                Birla Institute of Technology and Science (Expected Graduation:
+                August 2028)
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card hover-card rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Diploma in Computer Programming</h5>
+              <h6 class="card-text">
+                Algonquin College of Applied Arts and Technology (May 2023 –
+                December 2024)
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container mt-5">
+      <h2 class="text-center">Skills</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="skill-card">
+            <h5>Frontend Development</h5>
+            <ul>
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>Angular, Bootstrap, WordPress</li>
+              <li>Responsive Web Design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="skill-card">
+            <h5>Backend Development</h5>
+            <ul>
+              <li>Java, Python (FastAPI), Django</li>
+              <li>PHP, WordPress</li>
+              <li>Databases: MySQL, PostgreSQL, MongoDB, MSSQL</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="skill-card">
+            <h5>Version Control</h5>
+            <ul>
+              <li>Git, GitHub</li>
+              <li>Agile/Scrum Methodology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container mt-5">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card hover-card rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Travel Helper</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                December 2024 - January 2025
+              </h6>
+              <p class="card-text">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Created Travel Helper, a real-time search application that
+                allows users to find 50+ tourist attractions and restaurants
+                based on location input, utilizing Angular, FastAPI, and
+                MySQL.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Developed a dynamic web app with real-time search functionality
+                and a responsive design, ensuring engaging user experience
+                across multiple devices.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Implemented PDF generation for offline access and executed 15
+                test cases, ensuring reliable API integration and robust
+                performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card hover-card rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Budget Manager</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                November 2023 - January 2024
+              </h6>
+              <p class="card-text">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Developed Budget Me to enhance my skills in full-stack
+                development, focusing on server-side data management and
+                performance optimization using Python, FastAPI, and
+                PostgreSQL.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Built a secure application with JWT authentication, bcrypt
+                password hashing, and a dynamic Angular UI, 3 user-friendly
+                pages including Income Review, Budget Tracking, and Dashboard
+                Home Page.<br />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  style="vertical-align: middle"
+                >
+                  <path d="M21 12 3 19l4-7-4-7 18 7z"></path>
+                </svg>
+                Optimized database queries and structure, improving server-side
+                data retrieval and overall application performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contactForm" method="POST" action="/submit-contact-form">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
