@@ -2,20 +2,19 @@
 /*            GLOBAL             */
 /* ============================= */
 body {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* ============================= */
-/*            DARK MODE          */
-/* ============================= */
-body.dark-mode {
-    background-color: #2a3d66; /* Starry blue background */
+    transition:  0.3s ease, color 0.3s ease;
+    background: linear-gradient(to right, #cbe7f1, #a8d0e6); /* Light blue gradient */
     color: black;
 }
 
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(to right, #3d5791, #1a2b50); /* Dark blue gradient */
+    color: white;
+}
 /* Navigation */
 .navbar {
     background-color: #ffffff;
@@ -82,6 +81,59 @@ body.dark-mode .navbar-nav .nav-item .nav-link:hover {
     color: #333;
 }
 
+.go-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #0c2239;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-content button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .go-to-top-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+  }
+  
 .hover-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -177,82 +229,3 @@ body.dark-mode .footer {
     background-color: #1d2b4d;
     color: #f8f9fa;
 }
-
-/* Default Light Theme */
-body {
-    background-color: #f8f9fa;
-    color: #212529;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .navbar {
-    background-color: #f8f9fa;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .navbar .navbar-brand, .navbar .nav-link {
-    color: #212529;
-  }
-  
-  /* Dark Mode */
-  body.dark-mode {
-    background-color: #2a3d66;
-    color: #f8f9fa;
-  }
-  
-  .navbar.dark-mode {
-    background-color: #2a3d66;
-    color: #f8f9fa;
-  }
-  
-  .navbar.dark-mode .navbar-brand, .navbar.dark-mode .nav-link {
-    color: #f8f9fa;
-  }
-  
-  /* Typing Effect */
-  @keyframes typing {
-    0% { width: 0; border-right: 3px solid #212529; }
-    50% { width: 100%; border-right: 3px solid #212529; }
-    100% { width: 100%; border-right: none; }
-  }
-  
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .static-txt {
-    font-size: 50px;
-    font-weight: 600;
-    color: #212529;
-    margin-bottom: 10px;
-  }
-  
-  .dynamic-txt {
-    display: inline-block;
-    font-size: 40px;
-    font-weight: 400;
-    color: #212529;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #212529;
-  }
-  
-  /* Toggle Button */
-  .toggle-btn {
-    cursor: pointer;
-    padding: 10px 15px;
-    background-color: #2863a7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .toggle-btn:hover {
-    background-color: #1e4b72;
-  }
-  
