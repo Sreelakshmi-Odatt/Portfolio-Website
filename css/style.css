@@ -98,6 +98,18 @@ body.dark-mode .navbar-nav .nav-item .nav-link:hover {
     transition: all 0.3s ease-in-out;
   }
   
+  @media (max-width: 768px) { 
+    .card {
+        margin: 10px; /* Reduce margin for better fit */
+        padding: 10px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Adds space between cards */
+    }
+}
   /* Popup Styles */
 .popup {
     display: none;
@@ -197,6 +209,8 @@ body.dark-mode .navbar-nav .nav-item .nav-link:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
+    margin-bottom: 20px;
+    margin: 20px;
 }
 
 body.dark-mode .skill-card {
